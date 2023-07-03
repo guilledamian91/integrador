@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <meta charset="UTF-8">
+  <title>Comprar</title>
+  <link rel="icon" type="image/icon" sizes="32x32" href="{% static './imgs/menu y icon/favicon32x32_mejorado.ico' %}">
+  <link rel="icon" type="image/icon" sizes="16x16" href="{% static './imgs/menu y icon/favicon16x16_Mejorado.ico' %}">
+  <link rel="stylesheet" href="{% static './css/comprar/styles.css' %}">
+  <link rel="stylesheet" href="{% static './css/comprar/grillas.css' %}">   
+  <link rel="stylesheet" href="{% static './css/inicio/services.css' %}">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{% static './js/apis/comprar/apicompra.js' %}"></script>
+  <script src="{% static './js/enviarcorreo.js' %}"></script>
+
+  <link rel="stylesheet" href="{% static './css/menuFloat.css' %}">
+  <link rel="stylesheet" href="{% static './css/navBarClass.css' %}">
+  <script type="module" src="{% static './js/cargarNav.js' %}"></script>
+  
+
+  <nav id="navegacion"></nav>
+</head>
+<body >
+  
+  <div id="results"></div>
+
+   <!-- *FORMULARIO* -->
+  <div id="sidebar">
+    <!-- IFRAME DOLAR -->
+    <iframe class="responsive-iframe" frameborder="0" scrolling="no" src="https://www.cotizacion-dolar.com.ar/recursos-webmaster/promedios/cotizacion-argentina-300x150.php"></iframe>
+    <form action="#" method="POST" onsubmit="enviarCorreo(event)">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+
+      <label for="casa">Casa a consultar:</label>
+      <input type="text" id="casa" name="casa" placeholder="Dirección de la casa">
+
+      <label for="mail">Mail:</label>
+      <input type="email" id="mail" name="mail" placeholder="Tu correo electrónico">
+
+      <label for="consulta">Consulta:</label>
+      <textarea id="consulta" name="consulta" placeholder="Escribe aquí tu consulta"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+
+<!-- FOOTER CON IMAGENES DEL GRUPO Y NOMBRES -->
+<footer style=" border-top: 1px solid  #e5e5e5;">
+  <div class="cajanegra">
+            <div class="row1">
+              <div class="c2">
+                <article class="alumno">
+                  <img src="{% static './imgs/hombre.png' %}" alt="Agente Inmobiliario">
+                  <h2>Guillermo Perez Maidana</h2>
+                </article>
+                <article class="alumno">
+                  <img src="{% static './imgs/hombre (2).png' %}" alt="Agente Inmobiliario">
+                  <h2>Francisco N. Fonseca</h2>
+                </article>
+                <article class="alumno">
+                  <img src="{% static './imgs/hombre (3).png' %}" alt="Agente Inmobiliario">
+                  <h2>Juan Becerra</h2>
+                </article>
+              </div>
+              <div class="c2 logoGrupo">
+                <img src="{% static './imgs/logoG19.png' %}" alt="">
+              </div>
+            </div>
+          </div>
+</footer>
+<script type="text/javascript" src="{% static './js/muestraFotos.js' %}"></script>
+
+</html>
