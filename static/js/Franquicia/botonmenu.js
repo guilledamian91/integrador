@@ -4,3 +4,4 @@ const toggleButton = document.querySelector('.toggle-button');
     toggleButton.addEventListener('click', function() {
       menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
     });
+

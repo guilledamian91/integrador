@@ -6,7 +6,7 @@ header{
 	
 }
 .imgHeader{
-	    display: flex;
+	display: flex;
     flex-direction: column;
     justify-content: center;
 	background-image: url("../../imgs/pexels-august-de-richelieu-4259140.jpg");
@@ -14,7 +14,7 @@ header{
     background-position-y: center;
     height: auto;
     color: white;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 
 }
 
@@ -26,7 +26,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-
+	margin-top: 72px;
 }
 .botonesFlyer{
 	gap:30px;
